@@ -34,6 +34,9 @@
 
       // entry point:
       function main() {
+        const queryString = window.location.search;
+        console.log(queryString);
+
         JEELIZVTOWIDGET.start({
           sku: 'rayban_aviator_or_vertFlash',
           searchImageMask: 'target.png',
