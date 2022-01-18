@@ -34,11 +34,12 @@
 
       // entry point:
       function main() {
-        const queryString = window.location.search;
-        console.log(queryString);
+        let params = (new URL(document.location)).searchParams;
+        let token = params.get("id");
+        let newsku = token
 
         JEELIZVTOWIDGET.start({
-          sku: 'rayban_aviator_or_vertFlash',
+          sku: newsku,
           searchImageMask: 'target.png',
           searchImageColor: '#0000ffff',
           callbackReady: function(){
